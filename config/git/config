@@ -1,3 +1,5 @@
 [user]
 	email = moshez@zadka.club
 	name = Moshe Zadka
+[init]
+	defaultbranch = trunk
