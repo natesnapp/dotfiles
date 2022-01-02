@@ -1,4 +1,5 @@
-[git_status]
+[directory]
+truncate_to_repo = false
 
 [git_branch]
 format = "on [$branch]($style) "
