@@ -3,3 +3,6 @@ truncate_to_repo = false
 
 [git_branch]
 format = "on [$branch]($style) "
+
+[python]
+style = "blue bold"
