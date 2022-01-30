@@ -1,5 +1,7 @@
 #!/bin/bash
 DOTFILES="$(dirname $(realpath $0))"
 [ -L ~/.config ] || ln -s $DOTFILES/config ~/.config
-grep -q starship ~/.bashrc || echo "source ~/src/dotfiles/starship.bash" >> ~/.bashrc
-grep -q venvwrapper ~/.bashrc || echo "source ~/src/dotfiles/venvwrapper.bash" >> ~/.bashrc
+for script in starship venvwrapper ssh;
+do
+grep -q $script ~/.bashrc || echo "source ~/src/dotfiles/$script.bash" >> ~/.bashrc
+done
