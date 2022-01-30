@@ -1,7 +1,8 @@
 #!/bin/bash
 DOTFILES="$(dirname $(realpath $0))"
 [ -L ~/.config ] || ln -s $DOTFILES/config ~/.config
-for script in starship venvwrapper ssh;
+grep -q DOTFILES ~/.bashrc || echo "export DOTFILES=$DOTFILES" >> ~/.bashrc
+for script in starship venvwrapper ssh local-bin;
 do
 grep -q $script ~/.bashrc || echo "source ~/src/dotfiles/$script.bash" >> ~/.bashrc
 done
