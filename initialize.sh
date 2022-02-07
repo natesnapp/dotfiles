@@ -6,3 +6,4 @@ for script in starship venvwrapper ssh local-bin;
 do
 grep -q $script ~/.bashrc || echo "source ~/src/dotfiles/$script.bash" >> ~/.bashrc
 done
+python -m pip install --user pipx
