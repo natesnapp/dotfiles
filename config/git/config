@@ -3,3 +3,5 @@
 	name = Moshe Zadka
 [init]
 	defaultbranch = trunk
+[credential]
+       helper = cache --timeout 86400
